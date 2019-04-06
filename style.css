@@ -1,0 +1,167 @@
+/* Loader CSS */
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        text-align: center;
+    }
+    #loading {
+        top: 0;
+        height: 100%;
+        visibility: visible;
+    }
+    #loading section {
+        width: 30%;
+        display: inline-block;
+        text-align: center;
+        height: 215px;
+        vertical-align: top;
+        margin: 1%;
+        background: black;
+        border-radius: 5px;
+    }
+    #loading.hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+@media only screen and (min-width: 300px) and (max-width: 560px) {
+  #loading section {
+    min-width: 300px;
+  }
+}
+@media only screen and (min-width: 360px) and (max-width: 600px) {
+  #loading section {
+    min-width: 300px;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 667px) {
+  #loading section {
+    min-width: 300px;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 812px) {
+  #loading section {
+    min-width: 400px;
+  }
+}
+@media only screen and (min-width: 411px) and (max-width: 823px) {
+  #loading section {
+    min-width: 400px;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  #loading section {
+    min-width: 400px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #loading section {
+    min-width: 550px;
+  }
+}
+    .loader {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        margin-top: 80%;
+        margin-left: 25%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .css-times {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .css-times:before,
+    .css-times:after {
+        position: absolute;
+        content: "";
+        left: 50px;
+        top: 0;
+        width: 0.3em;
+        height: 4em;
+        background: black;
+        border-radius: 50px 50px 0 0;
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+        -webkit-transform-origin: 0 100%;
+                transform-origin: 0 100%;
+        -webkit-animation: times-background 1.5s ease-in-out infinite;
+                animation: times-background 1.5s ease-in-out infinite;
+    }
+    .css-times:after {
+        left: 0;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        -webkit-transform-origin: 100% 100%;
+                transform-origin: 100% 100%;
+    }
+    .loader-21 {
+        width: 100%;
+    }
+    .loader-21 .times1 {
+        -webkit-animation: times-pulse 1.5s ease-in-out infinite;
+                animation: times-pulse 1.5s ease-in-out infinite;
+        left: 0;
+    }
+    .loader-21 .times2 {
+        -webkit-animation: times-pulse 1.5s 0.2s ease-in-out infinite;
+                animation: times-pulse 1.5s 0.2s ease-in-out infinite;
+        left: 25px;
+    }
+    .loader-21 .times3 {
+        -webkit-animation: times-pulse 1.5s 0.4s ease-in-out infinite;
+                animation: times-pulse 1.5s 0.4s ease-in-out infinite;
+        left: 50px;
+    }
+    /* ----------------     KEYFRAMES    ----------------- */
+    @-webkit-keyframes times-pulse {
+        0%,
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+        }
+        60% {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            opacity: 0;
+        }
+    }
+    @keyframes times-pulse {
+        0%,
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+        }
+        60% {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            opacity: 0;
+        }
+    }
+    @-webkit-keyframes times-background {
+        0%,
+        100% {
+            background: rgb(250,0,0);
+        }
+        60% {
+            background: #ff3d00;
+        }
+    }
+    @keyframes times-background {
+        0%,
+        100% {
+            background: rgb(250,0,0);
+        }
+        60% {
+            background: #ff3d00;
+        }
+    }

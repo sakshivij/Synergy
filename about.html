@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IgniteSynergy</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <link href="styles.css" rel="stylesheet"> <!-- Main CSS -->
+    <link href="blog_style.css" rel="stylesheet"> <!-- Blog CSS -->
+    <link href="style.css" rel="stylesheet"> <!-- Loader CSS -->
+    <link href="animate.min.css" rel="stylesheet"> <!-- Animations CSS -->
+</head>
+<style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Oswald);
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  overflow-y: scroll;
+  position: absolute;
+}
+
+
+.bg-image,.bg-text {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("photos/IMG_1984.JPG");
+  
+  /* Add the blur effect */
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white !important;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@media screen and (max-width: 600px) {
+}
+body {
+  background-color: #efefef;
+  background: radial-gradient(rgb(255, 255, 255), rgb(200, 200, 200));
+}
+.banner{
+    width: 100%;
+    height: 500px;
+}
+#demo > .carousel{
+  width:100%;
+}
+ .carousel-inner img {
+      width: 100%;
+      height: 500px;
+  }
+ .college img{
+ 	height: 500px;
+ 	width: 100%;
+ 	max-width: 100%;
+ }
+ #caption{
+    color:white; 
+ }
+.container-fluid,.row.aboutContent{
+    opacity: 1 !important;
+    visibility: visible !important;
+    text-align: center; 
+
+ }
+</style>
+<body data-spy="scroll" data-target=".navbar" data-offset="50" style="background-color: black;">
+    <nav class="navbar navbar-expand-md navbar-dark bg-black fixed-top" style="background-color: black;">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand"><img class="img-fluid logo" src="photos/ignitelogo1.png" alt="IgniteSynergy logo" width="60%" height="5%" style="margin-left:-60%;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+<ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link tab" href="home.html">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link tab" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link tab" href="events.html">Events</a>
+          </li>
+          <!--<li class="nav-item">
+            <a class="nav-link tab" href="team.html">Team</a>
+          </li>-->
+          <li class="nav-item">
+            <a class="nav-link tab" href="sponsors.html">Sponsors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link tab" href="contact.html">Contact</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link tab" href="https://drive.google.com/open?id=0B8MYPd3uqUTbUjkzQU1zZk1NcmNNalV3R1Q2LVBxcy1aYXdB">Brochure</a>
+          </li>
+                <li>
+                        <button class="btn btn-secondary" class="register" style="text-decoration: none;background-color: transparent;" data-target="#registerModal" data-toggle="modal">Get Registered</button>
+        
+                    </li>
+            
+        </ul>
+            </div>
+        </div>
+    </nav>
+</div>  
+<div class="container" style="margin: 20px">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="modal fade" tabindex="-1" class="registerModal" id="registerModal" data-keyboard="false" data-backdrop="static">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                               <div class="modal-header">
+                                    
+                                    <h4 class="modal-title text-center">Event Registration</h4>
+                                </div>
+                                <div class="modal-body">
+                              Registration for events have been closed!
+                </div>
+                <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ <div class="bg-image"></div>
+<div class="bg-text">
+  <h1 id="caption" style="font-size:50px color:white !important;">KNOW MORE ABOUT US</h1><br/>
+</div>
+
+
+	<div class="padding"></div>
+	<div class="padding"></div>
+	<!--- Welcome Section -->
+	<div class="container-fluid" style="margin-top: 50px">
+		<div class="row  aboutContent">
+			<div class="col-12">
+				<blockquote class="blockquote">
+					<h3 style="color: #a22a2a;" class="animated slow delay-2s pulse">IGDTUW</h3>
+					<p class="lead">
+						Indira Gandhi Delhi Technical University for Women (Formally known as IGIT) emerged as an independent university in May, 2013 and became the first women's technical university in India established by Govt. of Delhi. IGDTUW, located in the heart of old Delhi, is ranked 1st among Top 10 Emerging Engineering Institutes of India. At IGDTUW, we believe to emancipate women through pursuit of knowledge enabling them to gain equal status in society through realization of their rights and responsibilities.
+					</p> 
+					<h3 style="color: #a22a2a;" class="animated slow delay-2s pulse">SYNERGY</h3>
+					<p class="lead">
+						Synergy is the Official Sports Club of IGDTUW. We at Synergy believe in inculcating the spirit of sports among women. Our teams have also participated and won many laurels in various inter college sports meets. Synergy conducts intra-college tournaments of volleyball, cricket, badminton and many more sports. We also regularly conduct events and sports challenges in the university, mainly to involve more and more women and give them the push they need to pursue sports and overcome the hesitation and stigma that is often associated with female participation in sports.
+					</p>
+					<h3 style="color: #a22a2a;" class="animated slow delay-2s pulse">IGNITE</h3>
+					<p class="lead">
+						IGNITE 2019 is the first edition of the Annual Sports Meet of IGDTUW, to be held at Jawaharlal Nehru Stadium, Delhi. IGNITE is a pioneering force in the domain of all-women organized Sports Meets in Delhi. We at IGDTUW, believe that there is an unexplored niche when it comes to celebrations of sports and sportspersons, and of female involvement in sports. Our aim is to create our mark here, and to successfully organize a 2-day sports extravaganza, on the 29nd-30th March,2019.
+
+                        The event will be graced by many achievers in the field of sports, as well as by teams from colleges across India. We are a hardworking team, aiming to organize this celebration of sports and making it a success, thereby setting a precedent for many more editions to follow.
+
+					</p>
+				</blockquote>
+				<hr>
+			</div>
+		</div>
+	</div>
+
+
+
+
+    <a href="javascript:" id="return-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <script>
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= 50) { 
+                $('#return-to-top').fadeIn(200);  
+            } else {
+                $('#return-to-top').fadeOut(200); 
+            }
+        });
+        $('#return-to-top').click(function() { 
+            $('body,html').animate({
+                scrollTop : 0                
+            }, 500);
+        });
+    </script>
+
+    <script>
+        window.sr = ScrollReveal();
+        sr.reveal('.navbar',{duration:1000});
+        sr.reveal('.row',{duration:1000});
+        sr.reveal('.container-fluid',{duration:1000});
+        sr.reveal('#about',{duration:1000});
+        sr.reveal('#blogs',{duration:1000});
+    </script>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+        <footer>
+        <div class="col-12 text-center">
+            <hr class="light-100">
+            <h6 class="last animated slow delay-6s slideInUp">&copy; Copyright 2019, All Rights Reserved with IGDTUW</h6>
+        </div>
+    </footer>
+
+</body>
+</html>

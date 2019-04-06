@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IgniteSynergy</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link href="team_style.css" rel="stylesheet"> <!-- Team CSS -->
+  <link href="animate.min.css" rel="stylesheet"> <!-- Animations CSS -->
+  <style class="cp-pen-styles">
+  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+html, body {
+  font-family: 'Poppins', sans-serif;
+  padding:0;
+        margin:0;
+        background-color:#fff;
+}
+a.insta {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.navbar {
+  padding: 0.8rem;
+}
+.navbar-nav li {
+  padding-right: 20px;
+}
+.nav-link {
+  font-size: 1.1em !important;
+}
+#ticketModal .modal-dialog {
+      max-width: 30em;
+      margin: 4em auto;
+}
+#ticketModal .modal-body {
+  position: relative;
+  padding: 1.3em;
+}
+#ticketModal .close {
+  position:absolute;
+  right:-30px;
+  top:0;
+  z-index:999;
+  font-size:2rem;
+  font-weight: normal;
+  color:#fff;
+  opacity:1;
+}
+#event1Modal .modal-dialog,#prize1Modal .modal-dialog,#event2Modal .modal-dialog,#prize2Modal .modal-dialog,#event3Modal .modal-dialog,#prize3Modal .modal-dialog,#event4Modal .modal-dialog,#prize4Modal .modal-dialog,#event5Modal .modal-dialog,#prize5Modal .modal-dialog {
+      max-width: 30em;
+      margin: 4em auto;
+}
+#event1Modal .modal-body,#prize1Modal .modal-body,#event2Modal .modal-body,#prize2Modal .modal-body,#event3Modal .modal-body,#prize3Modal .modal-body,#event4Modal .modal-body,#prize4Modal .modal-body,#event5Modal .modal-body,#prize5Modal .modal-body {
+  position: relative;
+  padding: 1.3em;
+}
+#event1Modal .close,#prize1Modal .close,#event2Modal .close,#prize2Modal .close,#event3Modal .close,#prize3Modal .close,#event4Modal .close,#prize4Modal .close,#event5Modal .close,#prize5Modal .close {
+  position:absolute;
+  right:-30px;
+  top:0;
+  z-index:999;
+  font-size:2rem;
+  font-weight: normal;
+  color:#fff;
+  opacity:1;
+}
+
+.lead {
+  color: gray;
+  text-align: justify;
+}
+.padding {
+  padding-bottom: 1rem;
+}
+.welcome {
+  width: 75;
+  margin: 0 auto;
+  padding-top: 1rem; 
+}
+.welcome hr {
+  border-top: 2px solid #b4b4b4;
+  width: 95%;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem; 
+}
+.title {
+    color: red;
+}
+.about__info {
+    height: 17%;
+}
+.bioText {
+    margin-top: 3em;
+}
+.social a {
+  font-size: 4.5em;
+  padding: 3rem;
+}
+.fa-facebook {
+  color: #3b5998;
+}
+.fa-linkedin {
+  color: #0e76a8;
+}
+.fa-google-plus-g {
+  color: #dd4b39;
+}
+.fa-instagram {
+  color: #bc2a8d;
+}
+.fa-youtube {
+  color: #bb0000;
+}
+.fa-facebook:hover, 
+.fa-linkedin:hover, 
+.fa-google-plus-g:hover,
+.fa-instagram:hover,
+.fa-youtube:hover {
+  color: #d5d5d5;
+}
+.input-prepend input {
+  width: 20em;
+}
+.fa-mobile {
+  font-size: 3.5em;
+  padding: 0.1rem;
+}
+footer {
+  background-color: BLACK;
+  color: #d5d5d5;
+  padding-top: 2rem;
+  overflow: hidden;
+} 
+hr.light {
+  border: 1px solid #d5d5d5;
+  width:75%;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+}
+hr.light-100 {
+  border: 1px solid #d5d5d5;
+  width:100%;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+}
+#return-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #bdc3c7;
+  opacity: 0.9;
+  width: 3em;
+  height: 3em;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.fa-angle-double-up {
+  color: #e74c3c;
+  margin: 0;
+  position: relative;
+  left: 0.9em;
+  top: 0.8em;
+  font-size: 19px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#return-to-top:hover {
+  background: #7f8c8d;
+}
+#return-to-top:hover i {
+  color: #fff;
+  top: 5px;
+}
+/*---Media Queries --*/
+@media (max-width: 992px) {
+  .social a {
+    font-size: 4em;
+    padding: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 200%;
+  }
+  .socail a {
+    font-size: 2.5em;
+    padding: 1.2rem;
+  }
+}
+@media (max-width: 576px) {
+  .display-4 {
+    font-size: 160%;
+  }
+  .socail a {
+    font-size: 2em;
+    padding: 0.7rem;
+  }
+}
+    @media screen and (max-width: 800px) {
+            .logo {
+                height: 25%;
+                width: 80%;
+            }
+            .welcome {
+                padding-top: 0;
+            }
+            .social a {
+                font-size: 2.5em;
+                padding: 0.6rem;
+            }
+        #ticketModal .modal-dialog {
+        max-width: 20em;
+        margin: 5em auto;
+            }
+            .about__section {
+                text-align: center;
+                width: 100%;
+            }
+            .about__info {
+                text-align: center;
+                height: 18%;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .logo {
+                height: 25%;
+                width: 80%;
+            }
+            .welcome {
+                padding-top: 0vh;
+            }
+            #ticketModal .modal-dialog {
+            max-width: 20em;
+            margin: 5em auto;
+                }
+            .social a {
+                font-size: 2.5em;
+                padding: 0.4rem;
+            }
+            .about__section {
+                text-align: center;
+                width: 100%;
+            }
+            .about__info {
+                text-align: center;
+                height: 18%;
+            }
+        }
+@media screen and (max-width: 800px) {
+    .navbar-brand {
+      height: 15%;
+      width: 50%;
+    }
+    .lead {
+      font-size: 90%;
+    }
+    .welcome {
+      padding-top: 0;
+    }
+    .social a {
+        font-size: 2.5em;
+        padding: 0.4rem;
+      }
+}
+@media screen and (max-width: 600px) {
+    .navbar-brand {
+      height: 15%;
+      width: 50%;
+    }
+    .lead {
+      font-size: 90%;
+    }
+    .welcome {
+      padding-top: 0vh;
+    }
+    #ticketModal .modal-dialog {
+        max-width: 300px;
+        margin: 5em auto;
+    }
+    .social a {
+        font-size: 2.5em;
+        padding: 0.4rem;
+    }
+}
+@media screen and (min-width: 900px) and (max-width: 1200px)  {
+        .navbar {
+          padding: 0;
+        }
+        .navbar-brand {
+            height: 60%;
+            width: 70%;
+        }
+/*.navbar-nav li {
+  padding-right: 0.3px;
+}*/
+.nav-link {
+  font-size: 1.4em !important;
+}
+        .padding {
+          padding-top: 0.5em;
+        }
+        .last {
+          font-size: 180%;
+        }
+    .display-4 {
+    font-size: 300%;
+  }
+ /* img.img-fluid.logo{
+            height: 50% !important;
+            width: 30% !important;
+    
+  }
+        .logo {
+            height: 10%;
+            width: 50%;
+        }*/
+        .lead {
+            font-size: 130%;
+        }
+        .about_slot .name {
+            font-size: 1.5em;
+        }
+        .about_slot .title {
+            font-size: 1em;
+        }
+        .social a {
+            font-size: 2.8em;
+            padding: 0.6rem;
+        } 
+      }
+      @media screen and (min-width: 1200px) {
+        .about__info .name {
+            font-size: 1.5em;
+        }
+        .about__info .title {
+            font-size: 1em;
+        }
+        .bioText {
+                font-size: 0.9em;
+            }
+      }     
+@media screen and (min-width: 320px) and (max-width: 500px) {
+    #ticketModal .modal-dialog {
+        max-width: 15em;
+        margin: 3em auto;
+    }
+}
+@media screen and (min-width: 360px) and (max-width: 600px) {
+    #ticketModal .modal-dialog {
+        max-width: 18em;
+        margin: 5em auto;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+    #ticketModal .modal-dialog {
+        max-width: 30em;
+        margin: 4em auto;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+    #ticketModal .modal-dialog {
+        max-width: 35em;
+        margin: 4em auto;
+    }
+}
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50" style="background-color: white;">
+    <nav class="navbar navbar-expand-md navbar-dark bg-black fixed-top animated slideInDown" style="background-color: black;">
+        <div class="container-fluid">
+            <a href="index.html" class="navbar-brand"><img class="img-fluid logo" width="140px" height="50px" src="photos/ignitelogo1.png" alt="IgniteSynergy logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link tab" href="home.html">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link tab" href="about.html">About</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link tab" href="events.html">Events</a>
+          </li>
+          <!--<li class="nav-item">
+            <a class="nav-link tab" href="team.html">Team</a>
+          </li>-->
+          <li class="nav-item">
+            <a class="nav-link tab" href="sponsors.html">Sponsors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link tab" href="contact.html">Contact</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link tab" href="https://drive.google.com/open?id=0B8MYPd3uqUTbUjkzQU1zZk1NcmNNalV3R1Q2LVBxcy1aYXdB">Brochure</a>
+          </li>
+                <li>
+        <button class="btn btn-secondary" class="register" style="text-decoration: none;background-color: transparent;" data-target="#registerModal" data-toggle="modal">Get Registered</button>
+                    </li>
+            
+        </ul>
+    </div>
+        </div>
+    </nav>
+</div>  
+
+ <div class="container" style="margin: 20px">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="modal fade" tabindex="-1" class="registerModal" id="registerModal" data-keyboard="false" data-backdrop="static">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                               <div class="modal-header">
+                                    
+                                    <h4 class="modal-title text-center">Event Registration</h4>
+                                </div>
+                                <div class="modal-body">
+                              Registration for events have been closed!
+                </div>
+                <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="modal fade" tabindex="-1" class="event1Modal" id="event1Modal" data-keyboard="false" data-backdrop="static">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                               <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title text-center">Rules</h4>
+                                </div>
+                                <div class="modal-body">
+                  1.      All universities and colleges are eligible for participating in the tournament.<br/>
+2.      All rules and regulations will apply in the conduct of tournament as per FIBA & BFI.<br/>
+3.      All the matches shall be played according to the fixtures prepared by the tournament committee. The committee shall, however, have the right to notify any subsequent change due to special unforeseen circumstances.
+4.      All teams should be in proper kit.<br/>
+5.      Each player has to bring College ID & Government ID card for verification purposes.<br/>
+6.      Each team will constitute of 12 players accompanied by a candidate leader.<br/>
+7.      Referee’s decision shall be the final and binding.<br/>
+8.      Entries once submitted will not be changed under any university/college.<br/>
+9.   The teams should be present 30 minutes before their matches failing which walkover shall be given in favor of opponents.<br/>
+10.   The tournament is solely for the promotion of the sport. Any kind of misbehavior will not be tolerated. Doing so will result in immediate disqualification.<br/>
+11.   There will be cash prizes, medals and certificates only for winners and runners up.<br/>
+                </div>
+                <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="container" style="margin: 20px">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="modal fade" tabindex="-1" class="prize1Modal" id="prize1Modal" data-keyboard="false" data-backdrop="static">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                               <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title text-center">Prizes</h4>
+                                </div>
+                                <div class="modal-body">
+                               
+                  <img src="photos/best.png"> &#8377;3,000/team<br/>
+                  <img src="photos/second.png"> &#8377;2,000/team<br/>
+                </div>
+                <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin: 20px">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="modal fade" tabindex="-1" class="event2Modal" id="event2Modal" data-keyboard="false" data-backdrop="static">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                               <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title text-center">Rules</h4>
+                                </div>
+                                <div class="modal-body">
+                                                      1. 6 players on the floor at any one time - 3 in the front row and 3 in the back row<br/>
+2. Maximum of 3 hits per side<br/>
+3. Points are made on every serve for winning team of rally (rally-point scoring).<br/>
+4. Player may not hit the ball twice in succession. (A block is not considered a hit.)<br/>
+5. Ball may be played off the net during a volley and on a serve.<br/>
+6. A ball hitting a boundary line is in.<br/>
+7. A ball is out if it hits an antennae, the floor completely outside the court, any of the net or cables outside the antennae, the referee stand or pole, the ceiling above a non-playable area.<br/>
+8. It is legal to contact the ball with any part of a player’s body.<br/>
+9. It is illegal to catch, hold or throw the ball.<br/>
+10. A player cannot block or attack a serve from on or inside the 10-foot line.<br/>
+11. After the serve, front-line players may switch positions at the net.<br/>
+12. Matches are made up of sets; the number depends on level of play. 3-set matches are 2 sets to 25 points and a third set to 15. Each set must be won by two points. The winner is the first team to win 2 sets. <br/>
+
+                </div>
+                <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="container" style="margin: 20px">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="modal fade" tabindex="-1" class="prize2Modal" id="prize2Modal" data-keyboard="false" data-backdrop="static">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                               <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title text-center">Prizes</h4>
+                                </div>
+                                <div class="modal-body">
+                               
+                  <img src="photos/best.png"> &#8377;3,000/team<br/>
+                  <img src="photos/second.png"> &#8377;2,000/team<br/>
+                </div>
+                <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin: 20px">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="modal fade" tabindex="-1" class="event3Modal" id="event3Modal" data-keyboard="false" data-backdrop="static">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                               <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title text-center">Rules</h4>
+                                </div>
+                                <div class="modal-body">
+<center>                    
+100m <br/>
+200m      <br/>  
+400m<br/>
+800m<br/>
+1500m<br/>
+4x100m Relay<br/>
+4x400m Relay<br/>
+Long Jump<br/>
+Shot Put<br/>
+</center>
+1. Heats for the short distance races (100m, 200m and 400m) will be conducted on the basis of number of participations.<br/>
+2. All the other races will be time trials, i.e. the final standings will be based on the best timings.<br/>
+3. All the races should be started with a proper ‘sitting start’ with only one foul start permitted. A second foul start will result in automatic elimination from the event.<br/>
+4. In every field event, each participant will get 3 trials, of which the best will be considered for overall standings.<br/>
+5. Maximum of 2 participants from each college in any individual event are allowed.<br/>
+6. An individual can participate in maximum of 3 individual events (excluding relays). Unable to follow this rule might result in cancellation of event(s).<br/>
+7. In any case of conflict, referee’s decision will be final.
+<br/>
+                </div>
+                <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="container" style="margin: 20px">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="modal fade" tabindex="-1" class="prize3Modal" id="prize3Modal" data-keyboard="false" data-backdrop="static">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                               <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title text-center">Prizes</h4>
+                                </div>
+                                <div class="modal-body">
+                               
+                  <img src="photos/best.png">Team Events: &#8377;2,000/team<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Individual: &#8377;1,000<br/>
+                  <img src="photos/second.png">Team Events: &#8377;1,000/team<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Individual: &#8377;500<br/>
+                </div>
+                <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin: 20px">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="modal fade" tabindex="-1" class="event4Modal" id="event4Modal" data-keyboard="false" data-backdrop="static">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                               <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title text-center">Rules</h4>
+                                </div>
+                                <div class="modal-body">
+                The number of players representing any college in a team must be minimum of 3 members and can be a maximum of 5 members. <br/>
+The order of events shall be as follows:<br/> 
+1.  Women: Singles / Doubles / Singles<br/>
+2.  Each set will be of 21 points and there will be 3 sets in a game.<br/>
+3.   Only one member of the team can be repeated.<br/>
+4.   Team line-up for the match must be submitted before the match. Any request to change the line-up won’t be accepted after submission of the list.<br/>
+5.   Latest BWF rules will be followed.<br/>
+6.  Players must wear neat and clean non-marking shoes with red sole while on court.<br/> 
+7.   Any new rule or a change in rules will be informed to the teams by the event coordinators prior to the beginning of match. In any case, the decision of referee and the officials shall be considered final.<br/>
+8.   In case of any discrepancy, the decision of referees shall be considered final.<br/>
+
+                </div>
+                <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="container" style="margin: 20px">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="modal fade" tabindex="-1" class="prize4Modal" id="prize4Modal" data-keyboard="false" data-backdrop="static">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                               <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title text-center">Prizes</h4>
+                                </div>
+                                <div class="modal-body">
+                               
+                  <img src="photos/best.png"> &#8377;3,000/team<br/>
+                  <img src="photos/second.png"> &#8377;2,000/team<br/>
+                </div>
+                <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin: 20px">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="modal fade" tabindex="-1" class="event5Modal" id="event5Modal" data-keyboard="false" data-backdrop="static">
+                    <div class="modal-dialog modal-md modal-xs">
+                        <div class="modal-content">
+                               <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title text-center">Rules</h4>
+                                </div>
+                                <div class="modal-body">
+                  1.All universities and colleges are eligible for participating in the tournament.<br/>
+2.All the matches shall be played according to the fixtures prepared by the tournament committee. The committee shall, however, have the right to notify any subsequent change due to special unforeseen circumstances.<br/>
+3.  A team of maximum 3 players is allowed. If the 3rd participant is injured it should be informed beforehand. Each player has to bring College ID & Government ID card for verification purposes. Entries once submitted will not be changed under any university/college.<br/>
+4.   A team of two players is allowed to participate in the team matches if the third player of the team is injured, sick or disqualified.<br/> 
+5.   Before the start of the match, the team winning the toss shall choose either to be the ABC team or the XYZ team and the two team captains should decide the order of players. The team with the injured, ill or disqualified player will lose the match/es supposed to be played by this player automatically by walkover following the established order of matches. The final result of the team match will be the played matches scored plus walkover matches scored.<br/><br/> 
+ The competition format will be as follows: <br/>
+1.  The team match shall end when one team has won a majority of the possible matches and this team will be declared the winner of this team match (2:0 or 2:1). <br/>
+<img src="photos/order.PNG" width="350px" height="100px" pa> <br/>
+2.Referee’s decision shall be the final and binding.<br/>
+3.  The teams should be present 30 minutes before their matches failing which walkover shall be given in favor of opponents.<br/>
+4.  The tournament is solely for the promotion of the sport. Any kind of misbehavior will not be tolerated. Doing so will result in immediate disqualification.<br/>
+5.  There will be cash prizes only for winners and runners up.<br/>
+
+                </div>
+                <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="container" style="margin: 20px">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="modal fade" tabindex="-1" class="prize5Modal" id="prize5Modal" data-keyboard="false" data-backdrop="static">
+                    <div class="modal-dialog modal-md">
+                        <div class="modal-content">
+                               <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title text-center">Prizes</h4>
+                                </div>
+                                <div class="modal-body">
+                               
+                  <img src="photos/best.png"> &#8377;2,000/team<br/>
+                  <img src="photos/second.png"> &#8377;1,000/team<br/>
+                </div>
+                <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="events" style="padding: 30px;margin-top: 0px;">
+<div class="row event">
+
+<div class="col-sm" >
+<div class="card text-center" style="width: 20rem;">
+  <div class="card-body">
+    <h5 class="card-title">BasketBall</h5>
+    <img src="photos/basketball.png" width="100px" height="100px"><br><br>
+    <button class="btn btn-primary" data-target="#event1Modal" data-toggle="modal">Rules</button>
+    <button class="btn btn-primary" data-target="#prize1Modal" data-toggle="modal">Prizes</button>
+    <br/><br/>For any queries contact:<br/>
+         Anjali Singh :  9958246433<br/>
+         Apurva : 9313759050
+
+  <br/>
+  </div>
+</div>
+</div>
+
+<div class="col-sm">
+<div class="card text-center" style="width: 20rem;">
+  <div class="card-body">
+    <h5 class="card-title">VolleyBall</h5>
+    <img src="photos/volleyball.png" width="100px" height="100px"><br><br>
+ <button class="btn btn-primary" data-target="#event2Modal" data-toggle="modal">Rules</button>
+    <button class="btn btn-primary" data-target="#prize2Modal" data-toggle="modal">Prizes</button>
+  <br/> <br>
+        For any queries contact:<br/>
+         Nisha: 7357484929<br/>
+         Neha: 9953632846
+
+  </div>
+</div>
+</div>
+
+<div class="col-sm">
+<div class="card text-center" style="width: 20rem;">
+  <div class="card-body">
+    <h5 class="card-title">Athletics</h5>
+    <img src="photos/running.png" width="100px" height="100px"><br><br>
+ <button class="btn btn-primary" data-target="#event3Modal" data-toggle="modal">Rules</button>
+    <button class="btn btn-primary" data-target="#prize3Modal" data-toggle="modal">Prizes</button>
+<br/> <br>
+        For any queries contact:<br/>
+Aakanksha: 9717044693<br/>
+Vinita: 9643045301
+
+  </div>
+</div>
+</div>
+
+
+<div class="col-sm">
+<div class="card text-center" style="width: 20rem;">
+  <div class="card-body">
+    <h5 class="card-title">Badminton</h5>
+    <img src="photos/racket.png" width="100px" height="100px"><br><br>
+ <button class="btn btn-primary" data-target="#event4Modal" data-toggle="modal">Rules</button>
+    <button class="btn btn-primary" data-target="#prize4Modal" data-toggle="modal">Prizes</button>
+    <br/><br>
+   For any queries contact:<br/>
+         Lisha: 9829050199
+<br/>
+          Niyati: 9868217212
+
+
+  </div>
+</div>
+</div>
+
+<div class="col-sm">
+<div class="card text-center" style="width: 20rem;">
+  <div class="card-body">
+    <h5 class="card-title">Table Tennis</h5>
+    <img src="photos/tennis.png" width="100px" height="100px"><br><br>
+ <button class="btn btn-primary" data-target="#event5Modal" data-toggle="modal">Rules</button>
+    <button class="btn btn-primary" data-target="#prize5Modal" data-toggle="modal">Prizes</button>
+    <br><br/>
+   For any queries contact:<br/>
+         Jaskiran: 9205013625
+
+  </div>
+</div>
+</div>
+
+<div class="col-sm"></div>
+
+</div>
+
+</div>
+
+  
+
+   
+    <!--- Footer -->
+    <footer>
+            <div class="container-fluid padding" id="contact">
+            <div class="row welcome text-center">
+                <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 class="display-4 animated slow delay-1s flipInX" style="color: gray;">Contact</h1>
+                <br>
+                <div class="col-12 social animated slow delay-2s zoomInDown">
+                
+                        <a href="https://www.instagram.com/synergy_igdtuw/" class="insta" target="_blank"><img src="photos/instagram.png"/></a>
+                    <a href="https://www.facebook.com/igdtuwsportsclub/" target="_blank"><img src="photos/facebook.png"/></a>
+                    
+    </div>      
+            </div>
+            <!-- <hr> -->
+        </div>
+                
+        </div>
+    
+        <div class="col-12 text-center">
+            <hr class="light-100">
+            <h6 class="last animated slow delay-6s slideInUp">&copy; Copyright 2019, All Rights Reserved with IGDTUW</h6>
+        </div>
+    </footer>
+
+  <a href="javascript:" id="return-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+  <script>
+    $(window).scroll(function() {
+      if ($(this).scrollTop() >= 50) { 
+        $('#return-to-top').fadeIn(200);  
+      } else {
+        $('#return-to-top').fadeOut(200); 
+      }
+    });
+    $('#return-to-top').click(function() { 
+      $('body,html').animate({
+        scrollTop : 0                
+      }, 500);
+    });
+  </script>
+<script >function biograph(e) {
+    if (e.className == 'about__slot') {
+        e.className = 'about__slot bio';
+    } else
+    {
+        if(e.className == 'btn btn-secondary')
+            e.className = 'ticketModal';
+        else
+            e.className = 'about__slot';
+
+   }
+}
+</script>
+
+</body>
+</html>
